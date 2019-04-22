@@ -1,0 +1,60 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    user: root
+    pass: root
+    url: jdbc:mysql://localhost:3306/webmagic?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&autoReconnect=true
+
+    initialSize: 5
+    maxWait: 60000
+    minIdle: 5
+    maxActive: 20
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    timeBetweenEvictionRunsMillis: 300000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+
+#redis
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    timeout: 2000
+    pool:
+      maxIdle: 10
+      minIdle: 5
+      maxTotal: 40
+      maxWaitMillis: 5000
+
+##打包时间
+package:
+  time: time_now
+
+
+#baidu ocr
+baidu:
+  api:
+    appId: 10528248
+    apiKey: PPIIoUBkCTjsjLgU2ZzFAnGF
+    secretKey: ZDeEfdhdYVP3l8S9oT7yryqnoviDrERG
+
+#xunfei ocr
+xunfei:
+  api:
+    appId: 5bdab813
+    apiKey: ced88caadb5f523a6a04abc1aef7a06f
+
+#huawei
+huawei:
+  api:
+    username: muicx
+    pwd: 51dojo.com

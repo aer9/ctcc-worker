@@ -1,0 +1,128 @@
+
+
+
+
+<html>
+<head>
+    <title>电信网码号管理系统</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="keywords" content="码号" />
+    <meta name="description" content="" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="/components/newhome/css/view.css"/>
+    <link type="text/css" href="/components/newhome/css/menu.css" rel="stylesheet" />
+
+    <script src="/components/newhome/js/jquery.js" language="javascript" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(function(){
+            $('#msg_del').click(function(){
+                var issure=confirm("确实要删除该信息？");
+                if(issure){
+                    var value='217465150018442089';
+                    $.ajax({
+                        type: "get",
+                        url: "Notice.action?doType=del&id="+value,
+                        async: false
+                    });
+                    reloadWindow();
+                    window.opener=null;
+                    window.open('','_self');
+                    window.close();
+                }
+            })
+
+            $('#msg_dell').click(function(){
+                var issure=confirm("确实要删除该信息？");
+                if(issure){
+                    var value='217465150018442089';
+                    $.ajax({
+                        type: "get",
+                        url: "Notice.action?doType=del&id="+value,
+                        async: false
+                    });
+                    reloadWindow();
+                    window.opener=null;
+                    window.open('','_self');
+                    window.close();
+                }
+            })
+
+            function reloadWindow(){
+                var parent_window=window.opener;
+                if(parent_window&&!parent_window.closed){
+                    parent_window.location.reload();
+                    alert('消息已成功删除！');
+                }
+            }
+
+
+
+        })
+
+    </script>
+
+
+
+</head>
+<body>
+
+
+
+
+<!--top part-->
+
+
+
+
+<IFRAME style=margin-top1:3px  frameborder="no" border="0" scrolling=no  marginheight=0 marginwidth=0  SRC="/components/miiUi/top&footer/top_mii$1.jsp
+" WIDTH="100%" HEIGHT="112px"></IFRAME>
+
+<div align="center" style="width:100%">
+    <div id="main" align="center" style="width:1024px">
+
+
+
+        <!--top part end-->
+
+        <!--center part-->
+        <div id="center" style='border-bottom:#2a6bbb 1px solid' >
+
+            <div id="title">
+                码号10660570核准公告
+            </div>
+            <div id="postDate">
+                发布人：<span>预受理</span> 发布日期：<span>2011年06月27日</span>
+                浏览次数：<span>1107</span>
+                <a class="action"  style="padding-left:10px" href=javascript:print()>打印</a> <a class="action" href='javascript:window.close()'>关闭</a>
+
+            </div>
+            <div id="content">
+
+                <table><tr><td>码号10660570由工业和信息化部核配给武汉成熙信息技术有限责任公司。<br>使用有效期至2015-07-05。</td><tr><td>码号使用范围:全国<br>批准用途:跨省/全国性经营性短消息服务</td></tr><tr><td><br>证书编号:号[2011]00071-A011&nbsp;&nbsp;&nbsp;批准日期2011-06-10</td></tr></table>
+
+                <div id="contentFooter" style="width:100%; text-align:center"><a class="action"  href="#">返回顶部</a> <a  class="action"style="padding-left:10px" href=javascript:print()>打印</a> <a class="action" href='javascript:window.close()'>关闭</a>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!--center part end-->
+
+        <!--footer part begin-->
+
+        <!--footer part end-->
+    </div>
+</div>
+
+<IFRAME style=margin-top:3px  frameborder="no" border="0" scrolling=no  marginheight=0 marginwidth=0  SRC="/components/miiUi/top&footer/footer_mii$1.jsp" WIDTH="100%" HEIGHT="100px"></IFRAME>
+<IFRAME NAME="delWin" SRC="" WIDTH="" HEIGHT="" style="display:none"></IFRAME>
+</body>
+</html>
