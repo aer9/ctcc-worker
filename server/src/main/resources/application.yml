@@ -35,26 +35,3 @@ spring:
       maxTotal: 40
       maxWaitMillis: 5000
 
-##打包时间
-package:
-  time: time_now
-
-
-#baidu ocr
-baidu:
-  api:
-    appId: 10528248
-    apiKey: PPIIoUBkCTjsjLgU2ZzFAnGF
-    secretKey: ZDeEfdhdYVP3l8S9oT7yryqnoviDrERG
-
-#xunfei ocr
-xunfei:
-  api:
-    appId: 5bdab813
-    apiKey: ced88caadb5f523a6a04abc1aef7a06f
-
-#huawei
-huawei:
-  api:
-    username: muicx
-    pwd: 51dojo.com

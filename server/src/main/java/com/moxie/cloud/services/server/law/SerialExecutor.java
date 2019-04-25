@@ -77,6 +77,7 @@ public class SerialExecutor implements Executor {
         System.out.println(capacity);
         System.out.println(0 & CAPACITY);
 
+
 //        ExecutorService executor = Executors.newCachedThreadPool();
 //        Task task = new Task();
 ////        Future<Integer> result = executor.submit(task);
